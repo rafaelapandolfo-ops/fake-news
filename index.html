@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="FakeCheck - Aprenda a identificar fake news através de informações e jogos interativos.">
+
+    <title>FakeCheck | Combate às Fake News</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FUNDO DECORATIVO -->
+    <div class="background-glow glow-blue"></div>
+    <div class="background-glow glow-purple"></div>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">✓</span>
+                <span>Fake<span>Check</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Entenda</a></li>
+                <li><a href="#identifique">Identifique</a></li>
+                <li><a href="#jogo">Jogo</a></li>
+                <li><a href="#fontes">Fontes</a></li>
+            </ul>
+
+            <a href="#jogo" class="nav-button">Jogar agora</a>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero section" id="inicio">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Informação também é proteção
+                </div>
+
+                <h1>
+                    Nem tudo que você vê
+                    <span>é verdade.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Aprenda a identificar fake news, reconhecer sinais
+                    de desinformação e testar seus conhecimentos em
+                    desafios interativos.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#jogo" class="primary-button">
+                        Testar meus conhecimentos
+                        <span>→</span>
+                    </a>
+
+                    <a href="#sobre" class="secondary-button">
+                        Saiba mais
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>01</strong>
+                        <span>Informação</span>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>Verificação</span>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>Consciência</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ILUSTRAÇÃO -->
+            <div class="hero-visual">
+
+                <div class="visual-card main-card">
+
+                    <div class="card-top">
+                        <span class="fake-label">ALERTA</span>
+                        <span class="card-time">Agora</span>
+                    </div>
+
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <span>?</span>
+                        </div>
+                    </div>
+
+                    <div class="news-lines">
+                        <span class="line large"></span>
+                        <span class="line medium"></span>
+                        <span class="line small"></span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <span class="source-circle"></span>
+                        <span>Fonte desconhecida</span>
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card floating-one">
+                    <span class="floating-icon blue">✓</span>
+                    <div>
+                        <strong>Verifique</strong>
+                        <small>A fonte da informação</small>
+                    </div>
+                </div>
+
+                <div class="floating-card floating-two">
+                    <span class="floating-icon purple">!</span>
+                    <div>
+                        <strong>Cuidado</strong>
+                        <small>Com títulos sensacionalistas</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+        <section class="section" id="sobre">
+
+            <div class="section-heading">
+                <span class="section-tag">01 — ENTENDA</span>
+
+                <h2>
+                    O que são
+                    <span>fake news?</span>
+                </h2>
+
+                <p>
+                    Fake news são conteúdos falsos ou enganosos apresentados
+                    como se fossem informações verdadeiras. Elas podem ser
+                    criadas para manipular opiniões, gerar medo, obter
+                    cliques ou simplesmente enganar.
+                </p>
+            </div>
+
+
+            <div class="info-grid">
+
+                <article class="info-card">
+                    <div class="info-number">01</div>
+
+                    <div class="info-icon">◈</div>
+
+                    <h3>Desinformação</h3>
+
+                    <p>
+                        Informações falsas ou manipuladas podem parecer
+                        verdadeiras quando são compartilhadas sem
+                        verificação.
+                    </p>
+                </article>
+
+
+                <article class="info-card featured-card">
+                    <div class="info-number">02</div>
+
+                    <div class="info-icon">◉</div>
+
+                    <h3>Manipulação</h3>
+
+                    <p>
+                        Imagens, títulos e frases podem ser retirados
+                        de contexto para influenciar a interpretação
+                        de quem recebe a informação.
+                    </p>
+                </article>
+
+
+                <article class="info-card">
+                    <div class="info-number">03</div>
+
+                    <div class="info-icon">◇</div>
+
+                    <h3>Compartilhamento</h3>
+
+                    <p>
+                        Uma informação falsa pode alcançar milhares
+                        de pessoas em pouco tempo quando é compartilhada
+                        sem ser conferida.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- IDENTIFIQUE -->
+        <section class="section identification" id="identifique">
+
+            <div class="section-heading center">
+                <span class="section-tag">02 — IDENTIFIQUE</span>
+
+                <h2>
+                    Como reconhecer uma
+                    <span>fake news?</span>
+                </h2>
+
+                <p>
+                    Antes de acreditar ou compartilhar uma informação,
+                    faça algumas verificações simples.
+                </p>
+            </div>
+
+
+            <div class="tips-container">
+
+                <div class="tip-list">
+
+                    <div class="tip active">
+                        <span class="tip-number">01</span>
+                        <div>
+                            <h3>Confira a fonte</h3>
+                            <p>
+                                Veja quem publicou a informação e se
+                                o site ou perfil é confiável.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="tip">
+                        <span class="tip-number">02</span>
+                        <div>
+                            <h3>Leia além do título</h3>
+                            <p>
+                                Manchetes podem ser exageradas ou
+                                enganosas. Leia a notícia completa.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="tip">
+                        <span class="tip-number">03</span>
+                        <div>
+                            <h3>Procure outras fontes</h3>
+                            <p>
+                                Compare a informação com veículos
+                                jornalísticos e fontes independentes.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="tip">
+                        <span class="tip-number">04</span>
+                        <div>
+                            <h3>Observe a data</h3>
+                            <p>
+                                Uma notícia antiga pode voltar a circular
+                                como se fosse um acontecimento recente.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="verification-card">
+
+                    <div class="verification-header">
+                        <span>ANÁLISE DE CONTEÚDO</span>
+                        <span class="live-dot">●</span>
+                    </div>
+
+                    <div class="verification-score">
+                        <div class="score-circle">
+                            <span>78</span>
+                            <small>%</small>
+                        </div>
+
+                        <div>
+                            <strong>Verificação</strong>
+                            <p>Alguns sinais merecem atenção.</p>
+                        </div>
+                    </div>
+
+                    <div class="analysis-bar">
+                        <span></span>
+                    </div>
+
+                    <div class="analysis-items">
+                        <div>
+                            <span class="check">✓</span>
+                            Fonte identificada
+                        </div>
+
+                        <div>
+                            <span class="warning">!</span>
+                            Título sensacionalista
+                        </div>
+
+                        <div>
+                            <span class="check">✓</span>
+                            Data identificada
+                        </div>
+
+                        <div>
+                            <span class="warning">!</span>
+                            Informação sem confirmação
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOGO -->
+        <section class="section game-section" id="jogo">
+
+            <div class="section-heading center">
+                <span class="section-tag">03 — DESAFIO</span>
+
+                <h2>
+                    Verdadeiro ou
+                    <span>Fake?</span>
+                </h2>
+
+                <p>
+                    Analise a notícia, pense como um verificador de fatos
+                    e escolha a resposta correta.
+                </p>
+            </div>
+
+
+            <div class="game-container" id="gameContainer">
+
+                <div class="game-header">
+
+                    <div>
+                        <span class="game-label">DESAFIO</span>
+                        <h3>Você consegue identificar?</h3>
+                    </div>
+
+                    <div class="score-box">
+                        <span>PONTOS</span>
+                        <strong id="score">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-area">
+
+                    <div class="progress-info">
+                        <span>Questão <strong id="questionNumber">1</strong> de 5</span>
+                        <span id="progressPercent">20%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="news-card">
+
+                    <div class="news-card-header">
+                        <span class="category">NOTÍCIA</span>
+                        <span class="news-date">12 AGO 2026</span>
+                    </div>
+
+                    <div class="news-content">
+
+                        <div class="news-photo">
+                            <div class="photo-icon">📰</div>
+                        </div>
+
+                        <div class="news-info">
+
+                            <h3 id="newsTitle">
+                                Nova tecnologia promete acabar com todas as fake news da internet
+                            </h3>
+
+                            <p id="newsText">
+                                Um novo sistema revolucionário teria sido
+                                criado e seria capaz de identificar qualquer
+                                informação falsa publicada na internet.
+                            </p>
+
+                            <div class="news-source">
+                                <span class="source-avatar">?</span>
+
+                                <div>
+                                    <strong id="newsSource">
+                                        Fonte: Portal Notícias Agora
+                                    </strong>
+
+                                    <small id="sourceStatus">
+                                        Fonte não verificada
+                                    </small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="question-area">
+
+                    <h3>
+                        Essa informação parece...
+                    </h3>
+
+                    <div class="answer-buttons">
+
+                        <button class="answer-button fake" data-answer="fake">
+                            <span class="answer-icon">✕</span>
+
+                            <div>
+                                <strong>FAKE NEWS</strong>
+                                <small>Há sinais de informação falsa</small>
+                            </div>
+                        </button>
+
+
+                        <button class="answer-button real" data-answer="real">
+                            <span class="answer-icon">✓</span>
+
+                            <div>
+                                <strong>VERDADEIRA</strong>
+                                <small>A informação parece confiável</small>
+                            </div>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="game-feedback" id="gameFeedback">
+                    <div class="feedback-icon" id="feedbackIcon">✓</div>
+
+                    <div>
+                        <strong id="feedbackTitle">Muito bem!</strong>
+                        <p id="feedbackText">
+                            Você identificou corretamente os sinais.
+                        </p>
+                    </div>
+                </div>
+
+
+                <button class="next-button" id="nextButton">
+                    Próxima notícia →
+                </button>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+            <div class="result-container" id="resultContainer">
+
+                <div class="result-icon">🏆</div>
+
+                <span class="section-tag">DESAFIO FINALIZADO</span>
+
+                <h2>
+                    Seu resultado:
+                    <span id="finalScore">0</span> pontos
+                </h2>
+
+                <p id="resultMessage">
+                    Continue praticando para melhorar sua capacidade
+                    de identificar informações falsas.
+                </p>
+
+                <button class="primary-button" id="restartButton">
+                    Jogar novamente
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta-section">
+
+            <div class="cta-content">
+
+                <span class="section-tag">PENSE ANTES DE COMPARTILHAR</span>
+
+                <h2>
+                    Uma informação falsa
+                    <span>também pode causar consequências reais.</span>
+                </h2>
+
+                <p>
+                    Verifique. Questione. Compare. Só depois compartilhe.
+                </p>
+
+                <a href="#jogo" class="primary-button">
+                    Fazer o desafio
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FONTES -->
+        <section class="section sources-section" id="fontes">
+
+            <div class="section-heading">
+                <span class="section-tag">04 — REFERÊNCIAS</span>
+
+                <h2>
+                    Informação de
+                    <span>qualidade.</span>
+                </h2>
+
+                <p>
+                    Para verificar informações, procure fontes confiáveis,
+                    compare diferentes veículos e consulte iniciativas
+                    especializadas em checagem de fatos.
+                </p>
+            </div>
+
+
+            <div class="source-cards">
+
+                <div class="source-card">
+                    <span class="source-number">01</span>
+                    <h3>Agências de checagem</h3>
+                    <p>
+                        Consulte organizações especializadas em verificar
+                        informações e declarações públicas.
+                    </p>
+                </div>
+
+                <div class="source-card">
+                    <span class="source-number">02</span>
+                    <h3>Veículos jornalísticos</h3>
+                    <p>
+                        Compare informações em diferentes veículos
+                        jornalísticos reconhecidos.
+                    </p>
+                </div>
+
+                <div class="source-card">
+                    <span class="source-number">03</span>
+                    <h3>Fontes oficiais</h3>
+                    <p>
+                        Quando possível, procure a informação diretamente
+                        na instituição responsável pelo assunto.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#inicio" class="logo">
+                    <span class="logo-icon">✓</span>
+                    <span>Fake<span>Check</span></span>
+                </a>
+
+                <p>
+                    Informação, consciência e responsabilidade
+                    no combate à desinformação.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <strong>Navegação</strong>
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Entenda</a>
+                    <a href="#identifique">Identifique</a>
+                    <a href="#jogo">Jogo</a>
+                </div>
+
+                <div>
+                    <strong>Projeto</strong>
+                    <a href="#fontes">Fontes</a>
+                    <a href="#sobre">Informações</a>
+                    <a href="#jogo">Desafio</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <span>© 2026 FakeCheck</span>
+            <span>Feito para combater a desinformação.</span>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
