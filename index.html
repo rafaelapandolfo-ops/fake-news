@@ -1,26 +1,1913 @@
-<!-- AVALIAÇÃO DO SITE -->
-<section class="avaliacao-site">
-    <div class="avaliacao-conteudo">
-        <span class="avaliacao-label">FEEDBACK</span>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-        <h2>Você gostou do FakeCheck?</h2>
+<head>
 
-        <p>
-            Sua avaliação ajuda a melhorar este projeto e tornar a
-            informação contra a desinformação cada vez mais acessível.
-        </p>
+    <meta charset="UTF-8">
 
-        <button id="botao-coracao" class="botao-coracao" aria-label="Avaliar o site">
-            <span id="coracao">♡</span>
-        </button>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-        <div id="mensagem-avaliacao" class="mensagem-avaliacao">
-            Clique no coração para avaliar
+    <meta
+        name="description"
+        content="FakeCheck — aprenda a identificar, verificar e combater fake news."
+    >
+
+    <title>FakeCheck | Combate às Fake News</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background-glow glow-blue"></div>
+
+    <div class="background-glow glow-purple"></div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#inicio" class="logo">
+
+                <span class="logo-icon">
+                    ✓
+                </span>
+
+                <span>
+                    Fake<span>Check</span>
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#inicio">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#entenda">
+                        Entenda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#identifique">
+                        Identifique
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#prevencao">
+                        Previna-se
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#jogo">
+                        Simulador
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#fontes">
+                        Fontes
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a
+                href="#jogo"
+                class="nav-button"
+            >
+                Jogar agora
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero section"
+            id="inicio"
+        >
+
+            <div class="hero-content">
+
+
+                <div class="badge">
+
+                    <span class="badge-dot"></span>
+
+                    Informação também é proteção
+
+                </div>
+
+
+                <h1>
+
+                    Nem tudo que você vê
+                    <span>é verdade.</span>
+
+                </h1>
+
+
+                <p class="hero-text">
+
+                    Aprenda a identificar fake news, analisar
+                    informações e tomar decisões mais seguras
+                    antes de acreditar ou compartilhar qualquer
+                    conteúdo na internet.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#jogo"
+                        class="primary-button"
+                    >
+
+                        Testar meus conhecimentos
+
+                        <span>→</span>
+
+                    </a>
+
+
+                    <a
+                        href="#entenda"
+                        class="secondary-button"
+                    >
+
+                        Quero aprender
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-stats">
+
+                    <div>
+
+                        <strong>01</strong>
+
+                        <span>
+                            Observe
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>02</strong>
+
+                        <span>
+                            Verifique
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>03</strong>
+
+                        <span>
+                            Compartilhe
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="hero-visual">
+
+
+                <div class="main-news-card">
+
+
+                    <div class="news-top">
+
+                        <span class="alert-label">
+                            ATENÇÃO
+                        </span>
+
+                        <span>
+                            agora
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-photo">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                            alt="Pessoa utilizando computador"
+                        >
+
+                        <div class="photo-overlay">
+
+                            <span>
+                                ?
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fake-headline">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="hero-source">
+
+                        <div class="source-avatar">
+                            ?
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Fonte desconhecida
+                            </strong>
+
+                            <small>
+                                Verifique antes de compartilhar
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="floating-card floating-one">
+
+                    <div class="floating-icon blue">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Verifique
+                        </strong>
+
+                        <small>
+                            a fonte
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="floating-card floating-two">
+
+                    <div class="floating-icon purple">
+                        !
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Questione
+                        </strong>
+
+                        <small>
+                            antes de compartilhar
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ENTENDA
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="entenda"
+        >
+
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    01 — ENTENDA
+                </span>
+
+
+                <h2>
+
+                    O que são
+                    <span>fake news?</span>
+
+                </h2>
+
+
+                <p>
+
+                    O termo é usado para conteúdos falsos ou
+                    enganosos apresentados como informação verdadeira.
+                    A desinformação pode ser criada ou compartilhada
+                    para enganar, manipular ou influenciar pessoas.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="info-grid">
+
+
+                <article class="info-card">
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                    <div class="info-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        Informação falsa
+                    </h3>
+
+                    <p>
+
+                        Uma afirmação pode parecer verdadeira,
+                        mas não possuir evidências ou fontes
+                        confiáveis que sustentem o que está sendo
+                        divulgado.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="info-card featured-card">
+
+                    <span class="card-number">
+                        02
+                    </span>
+
+                    <div class="info-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Manipulação
+                    </h3>
+
+                    <p>
+
+                        Imagens, títulos, vídeos ou frases podem
+                        ser alterados ou retirados do contexto
+                        para mudar a maneira como uma pessoa
+                        interpreta determinado acontecimento.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="info-card">
+
+                    <span class="card-number">
+                        03
+                    </span>
+
+                    <div class="info-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Compartilhamento
+                    </h3>
+
+                    <p>
+
+                        Uma informação enganosa pode se espalhar
+                        rapidamente quando as pessoas a compartilham
+                        sem verificar sua origem.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             COMO IDENTIFICAR
+        ====================================================== -->
+
+        <section
+            class="section identification"
+            id="identifique"
+        >
+
+
+            <div class="section-heading center">
+
+                <span class="section-tag">
+                    02 — IDENTIFIQUE
+                </span>
+
+
+                <h2>
+
+                    Aprenda a reconhecer
+                    <span>os sinais.</span>
+
+                </h2>
+
+
+                <p>
+
+                    Não existe um único sinal que prove que uma
+                    informação é falsa. Por isso, observe vários
+                    elementos antes de tomar uma decisão.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="identification-layout">
+
+
+                <div class="signal-list">
+
+
+                    <div class="signal active">
+
+                        <div class="signal-number">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Título exagerado
+                            </h3>
+
+                            <p>
+
+                                Títulos que usam palavras como
+                                "URGENTE", "INACREDITÁVEL" ou
+                                "VOCÊ NÃO VAI ACREDITAR" merecem
+                                atenção.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="signal">
+
+                        <div class="signal-number">
+                            02
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Fonte desconhecida
+                            </h3>
+
+                            <p>
+
+                                Procure saber quem publicou,
+                                qual é o veículo e se existe
+                                uma fonte verificável.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="signal">
+
+                        <div class="signal-number">
+                            03
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Falta de evidências
+                            </h3>
+
+                            <p>
+
+                                Desconfie de afirmações muito
+                                fortes que não apresentam dados,
+                                documentos ou outras evidências.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="signal">
+
+                        <div class="signal-number">
+                            04
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Imagem fora de contexto
+                            </h3>
+
+                            <p>
+
+                                Uma fotografia verdadeira também
+                                pode ser utilizada para ilustrar
+                                uma situação diferente daquela
+                                em que foi registrada.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="signal">
+
+                        <div class="signal-number">
+                            05
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Informação antiga
+                            </h3>
+
+                            <p>
+
+                                Sempre confira a data. Uma notícia
+                                antiga pode voltar a circular como
+                                se fosse um acontecimento atual.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="verification-panel">
+
+
+                    <div class="panel-header">
+
+                        <span>
+                            ANÁLISE DE CONTEÚDO
+                        </span>
+
+                        <span class="live">
+                            ● ONLINE
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="scan-box">
+
+                        <div class="scan-line"></div>
+
+                        <div class="scan-icon">
+                            ?
+                        </div>
+
+                        <span>
+                            ANALISANDO
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="analysis-result">
+
+                        <div class="analysis-score">
+                            4
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                pontos de atenção
+                            </strong>
+
+                            <p>
+                                encontrados no conteúdo
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="analysis-list">
+
+                        <div>
+                            <span class="warning">
+                                !
+                            </span>
+
+                            Título sensacionalista
+                        </div>
+
+                        <div>
+                            <span class="warning">
+                                !
+                            </span>
+
+                            Fonte não identificada
+                        </div>
+
+                        <div>
+                            <span class="check">
+                                ✓
+                            </span>
+
+                            Data disponível
+                        </div>
+
+                        <div>
+                            <span class="warning">
+                                !
+                            </span>
+
+                            Evidências insuficientes
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PREVENÇÃO
+        ====================================================== -->
+
+        <section
+            class="section prevention"
+            id="prevencao"
+        >
+
+
+            <div class="section-heading center">
+
+                <span class="section-tag">
+                    03 — PREVENÇÃO
+                </span>
+
+
+                <h2>
+
+                    Como se
+                    <span>prevenir?</span>
+
+                </h2>
+
+
+                <p>
+
+                    Antes de compartilhar, faça uma pausa,
+                    verifique a informação e procure evidências.
+                    Alguns segundos podem fazer muita diferença.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="prevention-grid">
+
+
+                <article class="prevention-card">
+
+                    <div class="prevention-number">
+                        01
+                    </div>
+
+                    <div class="prevention-icon blue">
+                        ⏸
+                    </div>
+
+                    <h3>
+                        Pare e pense
+                    </h3>
+
+                    <p>
+
+                        Se uma publicação provocar medo,
+                        raiva ou choque imediatamente,
+                        evite compartilhá-la por impulso.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="prevention-card">
+
+                    <div class="prevention-number">
+                        02
+                    </div>
+
+                    <div class="prevention-icon purple">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Confira a fonte
+                    </h3>
+
+                    <p>
+
+                        Descubra quem publicou a informação
+                        e procure o conteúdo original ou uma
+                        fonte oficial.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="prevention-card">
+
+                    <div class="prevention-number">
+                        03
+                    </div>
+
+                    <div class="prevention-icon blue">
+                        ◷
+                    </div>
+
+                    <h3>
+                        Observe a data
+                    </h3>
+
+                    <p>
+
+                        Verifique quando o conteúdo foi publicado
+                        e se a informação ainda corresponde
+                        ao contexto atual.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="prevention-card">
+
+                    <div class="prevention-number">
+                        04
+                    </div>
+
+                    <div class="prevention-icon purple">
+                        ⇄
+                    </div>
+
+                    <h3>
+                        Compare
+                    </h3>
+
+                    <p>
+
+                        Procure a mesma informação em outras
+                        fontes confiáveis. Compare versões
+                        antes de tirar uma conclusão.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="prevention-card">
+
+                    <div class="prevention-number">
+                        05
+                    </div>
+
+                    <div class="prevention-icon blue">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Analise imagens
+                    </h3>
+
+                    <p>
+
+                        Fotos e vídeos também podem ser
+                        manipulados ou utilizados fora de contexto.
+                        Procure descobrir sua origem.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="prevention-card">
+
+                    <div class="prevention-number">
+                        06
+                    </div>
+
+                    <div class="prevention-icon purple">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Procure evidências
+                    </h3>
+
+                    <p>
+
+                        Uma informação confiável deve poder ser
+                        confrontada com dados, documentos ou
+                        fontes independentes.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CHECKLIST
+        ====================================================== -->
+
+        <section class="section checklist-section">
+
+
+            <div class="checklist-intro">
+
+                <span class="section-tag">
+                    CHECKLIST
+                </span>
+
+
+                <h2>
+
+                    Antes de
+                    <span>compartilhar.</span>
+
+                </h2>
+
+
+                <p>
+
+                    Faça estas perguntas rapidamente.
+                    Quanto mais respostas você conseguir,
+                    maior será sua segurança ao avaliar
+                    o conteúdo.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="checklist">
+
+
+                <label class="check-item">
+
+                    <input type="checkbox">
+
+                    <span class="custom-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Sei quem publicou?
+                    </span>
+
+                </label>
+
+
+
+                <label class="check-item">
+
+                    <input type="checkbox">
+
+                    <span class="custom-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        A fonte é verificável?
+                    </span>
+
+                </label>
+
+
+
+                <label class="check-item">
+
+                    <input type="checkbox">
+
+                    <span class="custom-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Conferi a data?
+                    </span>
+
+                </label>
+
+
+
+                <label class="check-item">
+
+                    <input type="checkbox">
+
+                    <span class="custom-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Comparei com outras fontes?
+                    </span>
+
+                </label>
+
+
+
+                <label class="check-item">
+
+                    <input type="checkbox">
+
+                    <span class="custom-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        A imagem está no contexto?
+                    </span>
+
+                </label>
+
+
+
+                <label class="check-item">
+
+                    <input type="checkbox">
+
+                    <span class="custom-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Existem evidências?
+                    </span>
+
+                </label>
+
+
+                <div
+                    class="checklist-message"
+                    id="checklistMessage"
+                ></div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SIMULADOR
+        ====================================================== -->
+
+        <section
+            class="section game-section"
+            id="jogo"
+        >
+
+
+            <div class="section-heading center">
+
+                <span class="section-tag">
+                    04 — SIMULADOR
+                </span>
+
+
+                <h2>
+
+                    Você cairia nessa
+                    <span>fake news?</span>
+
+                </h2>
+
+
+                <p>
+
+                    Agora é sua vez. Analise uma postagem,
+                    observe os detalhes e decida se você
+                    compartilharia ou não.
+
+                </p>
+
+            </div>
+
+
+
+            <div
+                class="game-container"
+                id="gameContainer"
+            >
+
+
+                <!-- GAME HEADER -->
+
+                <div class="game-header">
+
+                    <div>
+
+                        <span class="game-label">
+                            MISSÃO
+                        </span>
+
+                        <h3>
+                            Analise a postagem
+                        </h3>
+
+                    </div>
+
+
+                    <div class="score-box">
+
+                        <span>
+                            PONTOS
+                        </span>
+
+                        <strong id="score">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROGRESS -->
+
+                <div class="progress-area">
+
+                    <div class="progress-info">
+
+                        <span>
+
+                            Caso
+                            <strong id="questionNumber">
+                                1
+                            </strong>
+
+                            de 6
+
+                        </span>
+
+
+                        <span id="progressPercent">
+                            17%
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress"
+                            id="progress"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SOCIAL POST -->
+
+                <div class="social-post">
+
+
+                    <div class="post-header">
+
+
+                        <div class="post-profile">
+
+                            <div
+                                class="profile-picture"
+                                id="profilePicture"
+                            >
+                                NC
+                            </div>
+
+
+                            <div>
+
+                                <strong id="profileName">
+                                    Notícias Conectadas
+                                </strong>
+
+                                <span id="profileHandle">
+                                    @noticiasconectadas
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="post-menu"
+                            aria-label="Menu da postagem"
+                        >
+                            •••
+                        </button>
+
+
+                    </div>
+
+
+
+                    <div class="post-image">
+
+                        <img
+                            id="postImage"
+                            src=""
+                            alt="Imagem da postagem"
+                        >
+
+                        <div class="post-image-label">
+                            ANALISE A IMAGEM
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="post-body">
+
+                        <h3 id="postTitle">
+                            Título da publicação
+                        </h3>
+
+
+                        <p id="postText">
+                            Texto da publicação.
+                        </p>
+
+
+                        <div class="post-meta">
+
+                            <span>
+                                ♡ 2,8 mil
+                            </span>
+
+                            <span>
+                                ↗ 1,2 mil compartilhamentos
+                            </span>
+
+                            <span>
+                                💬 438
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="post-source">
+
+                        <div class="source-mini">
+                            ?
+                        </div>
+
+
+                        <div>
+
+                            <strong id="postSource">
+                                Fonte desconhecida
+                            </strong>
+
+                            <span id="postDate">
+                                Publicado hoje
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CLUES -->
+
+                <div class="clues">
+
+                    <div class="clues-title">
+                        <span>
+                            🔎
+                        </span>
+
+                        O que você encontrou?
+                    </div>
+
+
+                    <div class="clue-grid">
+
+
+                        <div class="clue">
+
+                            <span class="clue-icon">
+                                F
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    FONTE
+                                </small>
+
+                                <strong id="clueSource">
+                                    Desconhecida
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="clue">
+
+                            <span class="clue-icon">
+                                D
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    DATA
+                                </small>
+
+                                <strong id="clueDate">
+                                    Hoje
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="clue">
+
+                            <span class="clue-icon">
+                                E
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    EVIDÊNCIA
+                                </small>
+
+                                <strong id="clueEvidence">
+                                    Não encontrada
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUESTION -->
+
+                <div class="game-question">
+
+                    <h3>
+                        Você compartilharia?
+                    </h3>
+
+
+                    <div class="answer-buttons">
+
+
+                        <button
+                            class="answer-button danger"
+                            data-answer="fake"
+                        >
+
+                            <span class="answer-icon">
+                                ✕
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    NÃO
+                                </strong>
+
+                                <small>
+                                    Parece uma fake news
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <button
+                            class="answer-button safe"
+                            data-answer="real"
+                        >
+
+                            <span class="answer-icon">
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    SIM
+                                </strong>
+
+                                <small>
+                                    Parece confiável
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FEEDBACK -->
+
+                <div
+                    class="game-feedback"
+                    id="gameFeedback"
+                >
+
+                    <div
+                        class="feedback-icon"
+                        id="feedbackIcon"
+                    >
+                        ✓
+                    </div>
+
+
+                    <div>
+
+                        <strong id="feedbackTitle">
+                            Resposta correta!
+                        </strong>
+
+                        <p id="feedbackText">
+                            Explicação.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    class="next-button"
+                    id="nextButton"
+                >
+                    Próximo caso →
+                </button>
+
+
+            </div>
+
+
+
+            <!-- RESULT -->
+
+            <div
+                class="result-container"
+                id="resultContainer"
+            >
+
+                <div class="result-icon">
+                    🏆
+                </div>
+
+
+                <span class="section-tag">
+                    MISSÃO CONCLUÍDA
+                </span>
+
+
+                <h2>
+
+                    Você fez
+                    <span id="finalScore">
+                        0
+                    </span>
+                    pontos.
+
+                </h2>
+
+
+                <p id="resultMessage">
+
+                    Resultado do desafio.
+
+                </p>
+
+
+                <button
+                    class="primary-button"
+                    id="restartButton"
+                >
+
+                    Jogar novamente
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="cta-section">
+
+
+            <div class="cta-content">
+
+                <span class="section-tag">
+                    PENSE ANTES DE COMPARTILHAR
+                </span>
+
+
+                <h2>
+
+                    Uma informação falsa
+                    <span>também pode ter consequências reais.</span>
+
+                </h2>
+
+
+                <p>
+
+                    Questione. Verifique. Compare.
+                    Só depois compartilhe.
+
+                </p>
+
+
+                <a
+                    href="#jogo"
+                    class="primary-button"
+                >
+
+                    Testar novamente
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FONTES
+        ====================================================== -->
+
+        <section
+            class="section sources-section"
+            id="fontes"
+        >
+
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    05 — FONTES
+                </span>
+
+
+                <h2>
+
+                    Informação de
+                    <span>qualidade.</span>
+
+                </h2>
+
+
+                <p>
+
+                    Para estudar o tema com mais profundidade,
+                    consulte organizações e materiais especializados
+                    em educação midiática e combate à desinformação.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="source-cards">
+
+
+                <a
+                    href="https://www.unesco.org/"
+                    target="_blank"
+                    class="source-card"
+                >
+
+                    <span class="source-number">
+                        01
+                    </span>
+
+                    <h3>
+                        UNESCO
+                    </h3>
+
+                    <p>
+
+                        Materiais sobre educação midiática,
+                        jornalismo, informação e desinformação.
+
+                    </p>
+
+                    <span class="source-link">
+                        Acessar fonte →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="https://www.unicef.org/brazil/"
+                    target="_blank"
+                    class="source-card"
+                >
+
+                    <span class="source-number">
+                        02
+                    </span>
+
+                    <h3>
+                        UNICEF Brasil
+                    </h3>
+
+                    <p>
+
+                        Conteúdos educativos para reconhecer
+                        informações falsas e navegar com mais
+                        segurança.
+
+                    </p>
+
+                    <span class="source-link">
+                        Acessar fonte →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="https://www.unicef.org/brazil/relatorios/muito-mais-que-fake-news"
+                    target="_blank"
+                    class="source-card"
+                >
+
+                    <span class="source-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Muito mais que Fake News
+                    </h3>
+
+                    <p>
+
+                        Guia prático produzido pelo UNICEF
+                        para enfrentar a desinformação.
+
+                    </p>
+
+                    <span class="source-link">
+                        Ver material →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="#inicio"
+                    class="logo"
+                >
+
+                    <span class="logo-icon">
+                        ✓
+                    </span>
+
+                    <span>
+                        Fake<span>Check</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Educação para identificar,
+                    verificar e combater a desinformação.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <strong>
+                        Navegação
+                    </strong>
+
+                    <a href="#inicio">
+                        Início
+                    </a>
+
+                    <a href="#entenda">
+                        Entenda
+                    </a>
+
+                    <a href="#identifique">
+                        Identifique
+                    </a>
+
+                    <a href="#prevencao">
+                        Previna-se
+                    </a>
+
+                </div>
+
+
+
+                <div>
+
+                    <strong>
+                        Experiência
+                    </strong>
+
+                    <a href="#jogo">
+                        Simulador
+                    </a>
+
+                    <a href="#fontes">
+                        Fontes
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
         </div>
 
-        <div class="contador-avaliacao">
-            <strong id="contador-coracoes">0</strong>
-            pessoas gostaram deste projeto
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 FakeCheck
+            </span>
+
+            <span>
+                Projeto educacional sobre desinformação.
+            </span>
+
         </div>
-    </div>
-</section>
+
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
