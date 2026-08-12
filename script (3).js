@@ -8,164 +8,611 @@
    MENU MOBILE
    ========================================================= */
 
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navLinks =
+    document.getElementById("navLinks");
+
 
 menuToggle.addEventListener("click", () => {
+
     navLinks.classList.toggle("active");
+
 });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+        });
+
     });
-});
+
 
 
 /* =========================================================
-   JOGO
+   SINAIS DE IDENTIFICAÇÃO
    ========================================================= */
 
-const questions = [
+const signals =
+    document.querySelectorAll(".signal");
+
+
+signals.forEach(signal => {
+
+    signal.addEventListener("mouseenter", () => {
+
+        signals.forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+        signal.classList.add("active");
+
+    });
+
+});
+
+
+
+/* =========================================================
+   CHECKLIST
+   ========================================================= */
+
+const checklistInputs =
+    document.querySelectorAll(
+        ".check-item input"
+    );
+
+const checklistMessage =
+    document.getElementById(
+        "checklistMessage"
+    );
+
+
+function updateChecklist() {
+
+    const total =
+        checklistInputs.length;
+
+    const checked =
+        document.querySelectorAll(
+            ".check-item input:checked"
+        ).length;
+
+
+    if (checked === 0) {
+
+        checklistMessage.textContent = "";
+
+        return;
+
+    }
+
+
+    if (checked === total) {
+
+        checklistMessage.textContent =
+            "✓ Checklist completo! Você verificou todos os pontos.";
+
+        return;
+
+    }
+
+
+    if (checked >= 4) {
+
+        checklistMessage.textContent =
+            `✓ Muito bem! ${checked} de ${total} pontos verificados.`;
+
+        return;
+
+    }
+
+
+    checklistMessage.textContent =
+        `${checked} de ${total} pontos verificados.`;
+
+}
+
+
+checklistInputs.forEach(input => {
+
+    input.addEventListener(
+        "change",
+        updateChecklist
+    );
+
+});
+
+
+
+/* =========================================================
+   SIMULADOR DE FAKE NEWS
+   ========================================================= */
+
+const cases = [
 
     {
-        title: "Nova tecnologia promete acabar com todas as fake news da internet",
 
-        text: "Um novo sistema revolucionário teria sido criado e seria capaz de identificar qualquer informação falsa publicada na internet.",
+        profile:
+            "Notícias Conectadas",
 
-        source: "Fonte: Portal Notícias Agora",
+        handle:
+            "@noticiasconectadas",
 
-        status: "Fonte não verificada",
+        initials:
+            "NC",
 
-        answer: "fake",
+        title:
+            "URGENTE! Cientistas descobrem método capaz de eliminar qualquer vírus em segundos!",
 
-        explanation: "A afirmação é absoluta e não apresenta evidências ou fontes confiáveis que comprovem a existência de uma tecnologia capaz de detectar qualquer fake news."
+        text:
+            "Uma nova descoberta revolucionária teria sido criada por pesquisadores. Segundo a publicação, bastaria utilizar o método uma única vez para eliminar qualquer vírus do organismo. Compartilhe para que todos saibam!",
+
+        source:
+            "Portal Notícias Conectadas",
+
+        date:
+            "Publicado hoje",
+
+        clueSource:
+            "Sem fonte científica",
+
+        clueDate:
+            "Data atual",
+
+        clueEvidence:
+            "Nenhuma evidência",
+
+        image:
+            "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80",
+
+        answer:
+            "fake",
+
+        explanation:
+            "A publicação faz uma afirmação extremamente ampla, pede compartilhamento e não apresenta estudo, pesquisadores ou evidências verificáveis. Esses são sinais importantes para desconfiar do conteúdo."
+
     },
 
+
     {
-        title: "Pesquisa mostra aumento no uso de redes sociais entre jovens",
 
-        text: "Um levantamento realizado por uma instituição de pesquisa analisou hábitos digitais e apontou mudanças no comportamento de usuários mais jovens.",
+        profile:
+            "Observatório Digital",
 
-        source: "Fonte: Instituto de Pesquisa Digital",
+        handle:
+            "@observatoriodigital",
 
-        status: "Fonte identificada",
+        initials:
+            "OD",
 
-        answer: "real",
+        title:
+            "Pesquisa analisa como jovens utilizam redes sociais para consumir informação",
 
-        explanation: "A notícia apresenta uma instituição responsável pela pesquisa e descreve um levantamento. Mesmo assim, é importante procurar o estudo original antes de compartilhar."
+        text:
+            "Um estudo publicado por uma instituição de pesquisa analisou hábitos digitais e identificou diferentes formas utilizadas por jovens para acompanhar notícias e informações na internet.",
+
+        source:
+            "Instituição de Pesquisa Digital",
+
+        date:
+            "Publicado em 2026",
+
+        clueSource:
+            "Instituição identificada",
+
+        clueDate:
+            "Data informada",
+
+        clueEvidence:
+            "Estudo citado",
+
+        image:
+            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80",
+
+        answer:
+            "real",
+
+        explanation:
+            "A postagem apresenta uma fonte identificável e menciona um estudo. Ainda assim, a prática correta é procurar o estudo original e verificar se outras fontes confirmam a informação."
+
     },
 
+
     {
-        title: "URGENTE! Cientistas descobriram que beber água elimina qualquer vírus em segundos!",
 
-        text: "Mensagem compartilhada nas redes afirma que pesquisadores descobriram uma maneira simples de eliminar qualquer vírus do organismo apenas bebendo grandes quantidades de água.",
+        profile:
+            "Portal da Verdade",
 
-        source: "Fonte: Mensagem compartilhada",
+        handle:
+            "@portaldaverdadeoficial",
 
-        status: "Sem fonte científica",
+        initials:
+            "PV",
 
-        answer: "fake",
+        title:
+            "VOCÊ NÃO VAI ACREDITAR! Governo vai desligar a internet amanhã!",
 
-        explanation: "A notícia faz uma afirmação extraordinária sem apresentar estudo científico ou instituição responsável. Além disso, utiliza linguagem alarmista."
+        text:
+            "Mensagem que circula nas redes afirma que toda a internet será desligada durante 24 horas. A publicação pede que os usuários compartilhem imediatamente para avisar amigos e familiares.",
+
+        source:
+            "Portal da Verdade",
+
+        date:
+            "Publicado hoje",
+
+        clueSource:
+            "Fonte sem confirmação",
+
+        clueDate:
+            "Data recente",
+
+        clueEvidence:
+            "Sem documento oficial",
+
+        image:
+            "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80",
+
+        answer:
+            "fake",
+
+        explanation:
+            "O título utiliza linguagem alarmista e a postagem pede compartilhamento urgente. Uma afirmação dessa dimensão deveria possuir confirmação em fontes oficiais e veículos confiáveis."
+
     },
 
+
     {
-        title: "Biblioteca pública anuncia novo programa gratuito de leitura",
 
-        text: "Uma biblioteca municipal divulgou um novo programa que oferece atividades de leitura gratuitas para estudantes durante o período de férias.",
+        profile:
+            "Biblioteca Municipal",
 
-        source: "Fonte: Biblioteca Municipal",
+        handle:
+            "@bibliotecamunicipal",
 
-        status: "Fonte oficial",
+        initials:
+            "BM",
 
-        answer: "real",
+        title:
+            "Biblioteca anuncia programação gratuita de leitura para estudantes",
 
-        explanation: "A informação está associada diretamente à instituição responsável pelo programa. Consultar o canal oficial da biblioteca é uma boa maneira de confirmar a informação."
+        text:
+            "A instituição divulgou uma programação especial com atividades gratuitas de leitura durante o período de férias. As inscrições podem ser realizadas pelos canais oficiais da biblioteca.",
+
+        source:
+            "Biblioteca Municipal",
+
+        date:
+            "Publicado nesta semana",
+
+        clueSource:
+            "Canal institucional",
+
+        clueDate:
+            "Data informada",
+
+        clueEvidence:
+            "Programação oficial",
+
+        image:
+            "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1000&q=80",
+
+        answer:
+            "real",
+
+        explanation:
+            "A postagem está associada diretamente à instituição responsável pela atividade e informa onde a pessoa pode confirmar os detalhes. Mesmo assim, a melhor prática é conferir o canal oficial."
+
     },
 
+
     {
-        title: "Você não vai acreditar! Compartilhe agora para ganhar um prêmio secreto!",
 
-        text: "Uma publicação promete um prêmio para quem compartilhar a mensagem com dez pessoas. Não há informações sobre a empresa, regulamento ou forma oficial de participação.",
+        profile:
+            "Curiosidades Agora",
 
-        source: "Fonte: publicação viral",
+        handle:
+            "@curiosidadesagora",
 
-        status: "Fonte desconhecida",
+        initials:
+            "CA",
 
-        answer: "fake",
+        title:
+            "Esta foto prova que uma cidade inteira ficou sem energia por uma semana",
 
-        explanation: "A ausência de fonte, regras oficiais e informações verificáveis são sinais de alerta. Mensagens que pressionam o usuário a compartilhar também merecem atenção."
+        text:
+            "A publicação utiliza uma fotografia de uma cidade escura e afirma que a imagem mostra um apagão ocorrido recentemente. Nenhuma localização ou data da fotografia é apresentada.",
+
+        source:
+            "Curiosidades Agora",
+
+        date:
+            "Publicado ontem",
+
+        clueSource:
+            "Origem da foto não informada",
+
+        clueDate:
+            "Data da postagem",
+
+        clueEvidence:
+            "Local não confirmado",
+
+        image:
+            "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=80",
+
+        answer:
+            "fake",
+
+        explanation:
+            "A fotografia pode ser verdadeira, mas isso não significa que ela comprove a situação descrita. Sem origem, localização e contexto, a imagem não é evidência suficiente."
+
+    },
+
+
+    {
+
+        profile:
+            "Agência Ciência Hoje",
+
+        handle:
+            "@agenciacienciahoje",
+
+        initials:
+            "AC",
+
+        title:
+            "Novo estudo apresenta resultados sobre hábitos digitais da população",
+
+        text:
+            "Pesquisadores divulgaram resultados de um estudo sobre comportamento digital. A publicação apresenta a instituição responsável e indica onde os dados completos podem ser consultados.",
+
+        source:
+            "Agência Ciência Hoje",
+
+        date:
+            "Publicado este mês",
+
+        clueSource:
+            "Fonte identificada",
+
+        clueDate:
+            "Data informada",
+
+        clueEvidence:
+            "Dados disponíveis",
+
+        image:
+            "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+
+        answer:
+            "real",
+
+        explanation:
+            "A postagem apresenta uma fonte identificada e indica onde os dados podem ser consultados. Esses elementos ajudam na verificação, embora ainda seja recomendável conferir o material original."
+
     }
 
 ];
 
 
-let currentQuestion = 0;
+
+/* =========================================================
+   ELEMENTOS DO JOGO
+   ========================================================= */
+
+let currentCase = 0;
+
 let score = 0;
+
 let answered = false;
 
 
+const scoreElement =
+    document.getElementById("score");
+
+const questionNumber =
+    document.getElementById("questionNumber");
+
+const progressPercent =
+    document.getElementById("progressPercent");
+
+const progress =
+    document.getElementById("progress");
+
+
+const profilePicture =
+    document.getElementById("profilePicture");
+
+const profileName =
+    document.getElementById("profileName");
+
+const profileHandle =
+    document.getElementById("profileHandle");
+
+
+const postImage =
+    document.getElementById("postImage");
+
+const postTitle =
+    document.getElementById("postTitle");
+
+const postText =
+    document.getElementById("postText");
+
+
+const postSource =
+    document.getElementById("postSource");
+
+const postDate =
+    document.getElementById("postDate");
+
+
+const clueSource =
+    document.getElementById("clueSource");
+
+const clueDate =
+    document.getElementById("clueDate");
+
+const clueEvidence =
+    document.getElementById("clueEvidence");
+
+
+const answerButtons =
+    document.querySelectorAll(
+        ".answer-button"
+    );
+
+
+const feedback =
+    document.getElementById(
+        "gameFeedback"
+    );
+
+const feedbackIcon =
+    document.getElementById(
+        "feedbackIcon"
+    );
+
+const feedbackTitle =
+    document.getElementById(
+        "feedbackTitle"
+    );
+
+const feedbackText =
+    document.getElementById(
+        "feedbackText"
+    );
+
+
+const nextButton =
+    document.getElementById(
+        "nextButton"
+    );
+
+
+const gameContainer =
+    document.getElementById(
+        "gameContainer"
+    );
+
+const resultContainer =
+    document.getElementById(
+        "resultContainer"
+    );
+
+
+const finalScore =
+    document.getElementById(
+        "finalScore"
+    );
+
+const resultMessage =
+    document.getElementById(
+        "resultMessage"
+    );
+
+
+const restartButton =
+    document.getElementById(
+        "restartButton"
+    );
+
+
+
 /* =========================================================
-   ELEMENTOS
+   CARREGAR CASO
    ========================================================= */
 
-const scoreElement = document.getElementById("score");
-const questionNumber = document.getElementById("questionNumber");
-const progressPercent = document.getElementById("progressPercent");
-const progress = document.getElementById("progress");
+function loadCase() {
 
-const newsTitle = document.getElementById("newsTitle");
-const newsText = document.getElementById("newsText");
-const newsSource = document.getElementById("newsSource");
-const sourceStatus = document.getElementById("sourceStatus");
+    const item =
+        cases[currentCase];
 
-const answerButtons = document.querySelectorAll(".answer-button");
-
-const feedback = document.getElementById("gameFeedback");
-const feedbackIcon = document.getElementById("feedbackIcon");
-const feedbackTitle = document.getElementById("feedbackTitle");
-const feedbackText = document.getElementById("feedbackText");
-
-const nextButton = document.getElementById("nextButton");
-
-const gameContainer = document.getElementById("gameContainer");
-const resultContainer = document.getElementById("resultContainer");
-
-const finalScore = document.getElementById("finalScore");
-const resultMessage = document.getElementById("resultMessage");
-
-const restartButton = document.getElementById("restartButton");
-
-
-/* =========================================================
-   CARREGAR QUESTÃO
-   ========================================================= */
-
-function loadQuestion() {
-
-    const question = questions[currentQuestion];
 
     answered = false;
 
-    newsTitle.textContent = question.title;
-    newsText.textContent = question.text;
 
-    newsSource.textContent = question.source;
-    sourceStatus.textContent = question.status;
+    profilePicture.textContent =
+        item.initials;
 
-    questionNumber.textContent = currentQuestion + 1;
+    profileName.textContent =
+        item.profile;
 
-    const percentage =
-        ((currentQuestion + 1) / questions.length) * 100;
+    profileHandle.textContent =
+        item.handle;
 
-    progress.style.width = `${percentage}%`;
 
-    progressPercent.textContent = `${percentage}%`;
+    postImage.src =
+        item.image;
 
-    feedback.classList.remove("show", "wrong");
+    postImage.alt =
+        "Imagem da publicação";
 
-    nextButton.classList.remove("show");
+
+    postTitle.textContent =
+        item.title;
+
+    postText.textContent =
+        item.text;
+
+
+    postSource.textContent =
+        item.source;
+
+    postDate.textContent =
+        item.date;
+
+
+    clueSource.textContent =
+        item.clueSource;
+
+    clueDate.textContent =
+        item.clueDate;
+
+    clueEvidence.textContent =
+        item.clueEvidence;
+
+
+    questionNumber.textContent =
+        currentCase + 1;
+
+
+    const percent =
+        Math.round(
+            ((currentCase + 1) /
+            cases.length) * 100
+        );
+
+
+    progress.style.width =
+        `${percent}%`;
+
+
+    progressPercent.textContent =
+        `${percent}%`;
+
+
+    feedback.classList.remove(
+        "show",
+        "wrong"
+    );
+
+
+    nextButton.classList.remove(
+        "show"
+    );
+
 
     answerButtons.forEach(button => {
 
@@ -176,235 +623,250 @@ function loadQuestion() {
         button.style.borderColor = "";
 
     });
+
 }
 
 
+
 /* =========================================================
-   RESPONDER
+   RESPOSTA
    ========================================================= */
 
 answerButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener(
+        "click",
+        () => {
 
-        if (answered) {
-            return;
-        }
-
-        answered = true;
-
-        const selectedAnswer = button.dataset.answer;
-
-        const correctAnswer =
-            questions[currentQuestion].answer;
-
-        const isCorrect =
-            selectedAnswer === correctAnswer;
-
-
-        /* DESABILITA OS BOTÕES */
-
-        answerButtons.forEach(btn => {
-            btn.disabled = true;
-
-            if (btn !== button) {
-                btn.style.opacity = "0.45";
+            if (answered) {
+                return;
             }
-        });
 
 
-        /* RESPOSTA CORRETA */
+            answered = true;
 
-        if (isCorrect) {
 
-            score += 100;
+            const selected =
+                button.dataset.answer;
 
-            scoreElement.textContent = score;
 
-            feedback.classList.remove("wrong");
+            const correct =
+                cases[currentCase].answer;
 
-            feedbackIcon.textContent = "✓";
 
-            feedbackTitle.textContent = "Resposta correta!";
+            const isCorrect =
+                selected === correct;
 
-            feedbackText.textContent =
-                questions[currentQuestion].explanation;
+
+            answerButtons.forEach(
+                otherButton => {
+
+                    otherButton.disabled =
+                        true;
+
+
+                    if (
+                        otherButton !==
+                        button
+                    ) {
+
+                        otherButton.style.opacity =
+                            "0.4";
+
+                    }
+
+                }
+            );
+
+
+            if (isCorrect) {
+
+                score += 100;
+
+                scoreElement.textContent =
+                    score;
+
+
+                feedback.classList.remove(
+                    "wrong"
+                );
+
+
+                feedbackIcon.textContent =
+                    "✓";
+
+
+                feedbackTitle.textContent =
+                    "Resposta correta!";
+
+
+                feedbackText.textContent =
+                    cases[currentCase]
+                        .explanation;
+
+            }
+
+            else {
+
+                feedback.classList.add(
+                    "wrong"
+                );
+
+
+                feedbackIcon.textContent =
+                    "✕";
+
+
+                feedbackTitle.textContent =
+                    "Quase!";
+
+
+                feedbackText.textContent =
+                    cases[currentCase]
+                        .explanation;
+
+            }
+
+
+            feedback.classList.add(
+                "show"
+            );
+
+
+            nextButton.classList.add(
+                "show"
+            );
 
         }
-
-        /* RESPOSTA ERRADA */
-
-        else {
-
-            feedback.classList.add("wrong");
-
-            feedbackIcon.textContent = "✕";
-
-            feedbackTitle.textContent = "Não dessa vez!";
-
-            feedbackText.textContent =
-                questions[currentQuestion].explanation;
-        }
-
-
-        feedback.classList.add("show");
-
-        nextButton.classList.add("show");
-
-    });
+    );
 
 });
 
 
+
 /* =========================================================
-   PRÓXIMA QUESTÃO
+   PRÓXIMO CASO
    ========================================================= */
 
-nextButton.addEventListener("click", () => {
+nextButton.addEventListener(
+    "click",
+    () => {
 
-    currentQuestion++;
+        currentCase++;
 
-    if (currentQuestion >= questions.length) {
 
-        finishGame();
+        if (
+            currentCase >=
+            cases.length
+        ) {
 
-        return;
+            finishGame();
+
+            return;
+
+        }
+
+
+        loadCase();
+
     }
+);
 
-    loadQuestion();
-
-});
 
 
 /* =========================================================
-   FINALIZAR JOGO
+   FINALIZAR
    ========================================================= */
 
 function finishGame() {
 
-    gameContainer.style.display = "none";
-
-    resultContainer.classList.add("show");
-
-    finalScore.textContent = score;
+    gameContainer.style.display =
+        "none";
 
 
-    if (score === 500) {
+    resultContainer.classList.add(
+        "show"
+    );
+
+
+    finalScore.textContent =
+        score;
+
+
+    if (score === 600) {
 
         resultMessage.textContent =
-            "Excelente! Você demonstrou uma ótima capacidade de analisar informações e reconhecer sinais de desinformação.";
+            "Perfeito! Você analisou todos os casos corretamente e demonstrou uma excelente capacidade de verificar informações.";
 
     }
 
-    else if (score >= 300) {
+    else if (score >= 400) {
 
         resultMessage.textContent =
-            "Muito bom! Você conseguiu identificar boa parte das notícias. Continue verificando fontes antes de compartilhar.";
+            "Muito bom! Você identificou a maioria dos sinais de desinformação. Continue verificando fontes antes de compartilhar.";
 
     }
 
-    else if (score >= 100) {
+    else if (score >= 200) {
 
         resultMessage.textContent =
-            "Você está no caminho certo. Preste mais atenção às fontes, datas, títulos e evidências.";
+            "Bom começo! Você já reconhece alguns sinais importantes. Pratique mais e observe principalmente fonte, contexto e evidências.";
 
     }
 
     else {
 
         resultMessage.textContent =
-            "Não desanime! Identificar fake news é uma habilidade que melhora com prática e atenção.";
+            "Não desanime. Identificar desinformação é uma habilidade que melhora com prática. Volte ao conteúdo e tente novamente.";
 
     }
 
 }
 
 
+
 /* =========================================================
    REINICIAR
    ========================================================= */
 
-restartButton.addEventListener("click", () => {
+restartButton.addEventListener(
+    "click",
+    () => {
 
-    currentQuestion = 0;
+        currentCase = 0;
 
-    score = 0;
-
-    scoreElement.textContent = "0";
-
-    resultContainer.classList.remove("show");
-
-    gameContainer.style.display = "block";
-
-    loadQuestion();
-
-    document.getElementById("jogo").scrollIntoView({
-        behavior: "smooth"
-    });
-
-});
+        score = 0;
 
 
-/* =========================================================
-   ANIMAÇÃO DOS CARDS DE DICAS
-   ========================================================= */
-
-const tips = document.querySelectorAll(".tip");
-
-tips.forEach(tip => {
-
-    tip.addEventListener("mouseenter", () => {
-
-        tips.forEach(item => {
-            item.classList.remove("active");
-        });
-
-        tip.classList.add("active");
-
-    });
-
-});
+        scoreElement.textContent =
+            "0";
 
 
-/* =========================================================
-   ANIMAÇÃO AO ENTRAR NA TELA
-   ========================================================= */
+        resultContainer.classList.remove(
+            "show"
+        );
 
-const observer = new IntersectionObserver(
-    entries => {
 
-        entries.forEach(entry => {
+        gameContainer.style.display =
+            "block";
 
-            if (entry.isIntersecting) {
 
-                entry.target.classList.add("visible");
+        loadCase();
 
-            }
 
-        });
+        document
+            .getElementById("jogo")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
 
-    },
-    {
-        threshold: 0.12
     }
 );
 
-
-document
-    .querySelectorAll(
-        ".info-card, .tip, .verification-card, .source-card"
-    )
-    .forEach(element => {
-
-        element.classList.add("scroll-animation");
-
-        observer.observe(element);
-
-    });
 
 
 /* =========================================================
    INICIALIZAÇÃO
    ========================================================= */
 
-loadQuestion();
+loadCase();
